@@ -3,7 +3,6 @@
   <meta>
     <author>Ryan Lane</author>
     <sampleQuery>select * from {table} where title='article name'</sampleQuery>
-    <!--<documentationURL></documentationURL>-->
     <description>Retrieve content of Wikipedia Articles bby title</description>
   </meta>
   <bindings>

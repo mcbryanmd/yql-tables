@@ -3,7 +3,6 @@
   <meta>
     <author>Ryan Lane</author>
     <sampleQuery>select * from {table} where query='search tag(s)'</sampleQuery>
-    <!--<documentationURL></documentationURL>-->
     <description>Open search of Wikipedia Articles</description>
   </meta>
   <bindings>
