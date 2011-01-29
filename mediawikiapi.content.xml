@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table xmlns="http://query.yahooapis.com/v1/schema/table.xsd">
+  <meta>
+    <author>Ryan Lane</author>
+    <sampleQuery>select * from {table} where title='article name'</sampleQuery>
+    <!--<documentationURL></documentationURL>-->
+    <description>Retrieve content of Wikipedia Articles by title</description>
+  </meta>
+  <bindings>
+    <select itemPath="" produces="XML">
+      <urls>
+        <url>http://{site}/w/api.php?action=query&amp;format=xml&amp;prop=revisions&amp;rvprop=content&amp;rvsection=0&amp;rvlimit=1&amp;redirects</url>
+      </urls>
+      <inputs>
+        <key id="site" type="xs:string" paramType="path" required="false" default="en.wikipedia.org"/>
+        <key id="query" type="xs:string" paramType="query" required="true"/>
+        <key id="b" type="xs:string" paramType="query" required="true"/>
+        <key id="e" type="xs:string" paramType="query" required="true"/>
+      </inputs>
+  	  <execute><![CDATA[
+		var	tquery = "select content from searchtable("+b+","+e+") where search='"+query+"'",
+			cquery = "select text.content from parsetable where text in ( select revisions.rev from querytable where titles in ("+tquery+") )",
+			cquery = y.query(cquery),
+			tquery = y.query(tquery),
+			content = cquery.results.parse.text,
+			titles = tquery.results,
+			results = <results></results>;
+		titles.appendChild( content );
+		results.appendChild( titles );
+		response.object = titles;
+	  ]]></execute>
+    </select>
+  </bindings>
+</table>

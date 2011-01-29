@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table xmlns="http://query.yahooapis.com/v1/schema/table.xsd">
+  <meta>
+    <author>Ryan Lane</author>
+    <sampleQuery>select * from {table} where title='article name'</sampleQuery>
+    <!--<documentationURL></documentationURL>-->
+    <description>Retrieve content of Wikipedia Articles bby title</description>
+  </meta>
+  <bindings>
+    <select itemPath="api.query.pages.page" produces="XML">
+      <urls>
+        <url>http://{site}/w/api.php?action=query&amp;format=xml&amp;prop=revisions&amp;rvprop=content&amp;rvsection=0&amp;rvlimit=1&amp;redirects</url>
+      </urls>
+      <inputs>
+        <key id="site" type="xs:string" paramType="path" required="false" default="en.wikipedia.org"/>
+        <key id="titles" type="xs:string" paramType="query" required="true"/>
+      </inputs>
+    </select>
+  </bindings>
+</table>
