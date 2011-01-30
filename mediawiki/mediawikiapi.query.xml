@@ -15,9 +15,6 @@
         <key id="titles" type="xs:string" paramType="query" required="true"/>
       </inputs>
   	  <execute><![CDATA[
-		var content = request.get().response.page,
-			results = <results></results>,
-			items = <item></item>;
 		response.object = request.get().response;
 	  ]]></execute>
     </select>
