@@ -23,7 +23,7 @@
 			titles = <title>{title}</title>;
 		results.appendChild( titles );
 		results.appendChild( query.results );
-		response.object = results;
+		response.object = query.results;
 	  ]]></execute>
     </select>
   </bindings>
