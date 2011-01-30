@@ -21,7 +21,7 @@
 			results  = <results></results>,
 			titles = <title>{titles}</title>;
 		results.appendChild( titles );
-		results.appendChild( query.results.api.query.pages.page.revisions.rev.content );
+		results.appendChild( query.results.api.query.pages.page.revisions.rev );
 		response.object = results;
 	  ]]></execute>
     </select>
