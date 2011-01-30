@@ -17,7 +17,8 @@
   	  <execute><![CDATA[
 		var content = request.get().response.page,
 			results = <results></results>,
-			items = <item><titles>{titles}</titles></item>;
+			items = <item></item>;
+		items.appendChild( <titles>{titles}</titles> );
 		items.appendChild( content );
 		results.appendChild( items );
 		response.object = results;
