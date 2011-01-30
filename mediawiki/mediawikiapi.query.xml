@@ -20,7 +20,7 @@
 			items = <item></item>;
 		items.appendChild( content );
 		results.appendChild( items );
-		response.object = results;
+		response.object = request.get().response;
 	  ]]></execute>
     </select>
   </bindings>
