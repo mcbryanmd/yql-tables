@@ -16,14 +16,7 @@
       </inputs>
   	  <execute><![CDATA[
 		var content = request.get().response.page;
-			results = <results1></results1>;
-		var xresults =
-			<results>
-				<results>
-				<titles>{titles}</titles>
-				<site>{site}</site>
-				</results>
-			</results>;
+			results = <results><titles>{titles}</titles></results>;
 		results.appendChild( content );
 		response.object = results;
 	  ]]></execute>
