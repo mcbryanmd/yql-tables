@@ -15,14 +15,17 @@
         <key id="titles" type="xs:string" paramType="query" required="true"/>
       </inputs>
   	  <execute><![CDATA[
-		var results =
+		var content = request.get().response;
+			results = <results></results>;
+		var xresults =
 			<results>
 				<results>
 				<titles>{titles}</titles>
 				<site>{site}</site>
 				</results>
 			</results>;
-		response.object = request.get().response;
+		results.appendChild( content );
+		response.object = results;
 	  ]]></execute>
     </select>
   </bindings>
