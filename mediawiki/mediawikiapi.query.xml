@@ -15,9 +15,11 @@
         <key id="titles" type="xs:string" paramType="query" required="true"/>
       </inputs>
   	  <execute><![CDATA[
-		var content = request.get().response,
+		var url = "http://"+site+"/w/api.php?action=query&format=xml&prop=revisions&rvprop=content&rvsection=0&rvlimit=1&redirects&titles="+titles,
+			str = "select * from xml where url='" + url + "'",
+			query = y.query(str),
 			results  = <results></results>;
-		results.appendChild( content.results );
+		results.appendChild( query.results );
 		response.object = results;
 	  ]]></execute>
     </select>
