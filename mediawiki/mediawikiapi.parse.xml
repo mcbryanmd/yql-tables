@@ -22,7 +22,7 @@
 			results  = <item></item>,
 			titles = <title>{title}</title>;
 		results.appendChild( titles );
-		results.appendChild( query.results.api.parse  );
+		results.appendChild( query.results.api.parse );
 		response.object = results;
 	  ]]></execute>
     </select>
