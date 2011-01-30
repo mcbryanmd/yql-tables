@@ -15,8 +15,8 @@
         <key id="titles" type="xs:string" paramType="query" required="true"/>
       </inputs>
   	  <execute><![CDATA[
-		var xml = request.get().response;
-		response.object = xml.page.revisions.rev;
+		var xml = request.get().response.page.revisions.rev;
+		response.object = xml;
 	  ]]></execute>
     </select>
   </bindings>
