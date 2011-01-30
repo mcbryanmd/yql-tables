@@ -18,9 +18,7 @@
 		var url = "http://"+site+"/w/api.php?action=query&format=xml&prop=revisions&rvprop=content&rvsection=0&rvlimit=1&redirects&titles="+titles,
 			str = "select * from xml where url='" + url + "'",
 			query = y.query(str),
-			results  = <results></results>,
-			titles = <title>{titles}</title>;
-		results.appendChild( titles );
+			results = <title>{titles}</title>;
 		results.appendChild( query.results.api.query.pages.page.revisions.rev );
 		response.object = results;
 	  ]]></execute>
