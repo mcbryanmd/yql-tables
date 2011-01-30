@@ -15,7 +15,7 @@
         <key id="titles" type="xs:string" paramType="query" required="true"/>
       </inputs>
   	  <execute><![CDATA[
-		var content = request.get().response.page;
+		var content = request.get().response.page,
 			results = <results><titles>{titles}</titles></results>;
 		results.appendChild( content );
 		response.object = results;
