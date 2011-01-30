@@ -15,7 +15,7 @@
         <key id="titles" type="xs:string" paramType="query" required="true"/>
       </inputs>
   	  <execute><![CDATA[
-		var	results = <results><titles>titles</titles></results>,
+		var	results = <results><titles>titles</titles></results>;
 		response.object = results;
 	  ]]></execute>
     </select>
