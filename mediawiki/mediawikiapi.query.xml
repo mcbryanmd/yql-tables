@@ -18,8 +18,8 @@
 		var	results = <results></results>,
 			titles = <titles>titles</titles>,
 			site = <site>site</site>;
-		results.appendChild( titles );
-		results.appendChild( site );
+		results.appendChild( {titles} );
+		results.appendChild( {site} );
 		response.object = results;
 	  ]]></execute>
     </select>
