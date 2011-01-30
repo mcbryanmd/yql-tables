@@ -15,7 +15,11 @@
         <key id="titles" type="xs:string" paramType="query" required="true"/>
       </inputs>
   	  <execute><![CDATA[
-		var xml = request.get().response;
+		var xml = <results></results>,
+			items = <items></items>,
+			titles = titles;
+		items.appendChild( titles );
+		xml.appendChild( items );
 		response.object = xml;
 	  ]]></execute>
     </select>
