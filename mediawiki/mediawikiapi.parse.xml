@@ -13,6 +13,7 @@
       <inputs>
         <key id="site" type="xs:string" paramType="path" required="false" default="en.wikipedia.org"/>
         <key id="text" type="xs:string" paramType="query" required="true"/>
+        <key id="title" type="xs:string" paramType="query" required="true"/>
       </inputs>
     </select>
   </bindings>

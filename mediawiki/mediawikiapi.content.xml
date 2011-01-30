@@ -17,16 +17,12 @@
         <key id="e" type="xs:string" paramType="query" required="true"/>
       </inputs>
   	  <execute><![CDATA[
-		var	tquery = "select content from searchtable("+b+","+e+") where search='"+query+"'",
-			cquery = "select text.content from parsetable where text in ( select revisions.rev from querytable where titles in ("+tquery+") )",
-			cquery = y.query(cquery),
-			tquery = y.query(tquery),
-			content = cquery.results.parse.text,
-			titles = tquery.results,
+		var	str = "select * from parsetable where (title,text) in ( select title,rev from querytable where titles in (select content from searchtable(@b,@e) where search=@query) )",
+			query = y.query(str),
+			content = query.results,
 			results = <results></results>;
-		titles.appendChild( content );
-		results.appendChild( titles );
-		response.object = titles;
+		results.appendChild( content );
+		response.object = results;
 	  ]]></execute>
     </select>
   </bindings>
