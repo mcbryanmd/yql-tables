@@ -6,7 +6,7 @@
     <description>Retrieve content of Wikipedia Articles bby title</description>
   </meta>
   <bindings>
-    <select itemPath="api.query.pages.page" produces="XML">
+    <select itemPath="" produces="XML">
       <urls>
         <url>http://{site}/w/api.php?action=query&amp;format=xml&amp;prop=revisions&amp;rvprop=content&amp;rvsection=0&amp;rvlimit=1&amp;redirects</url>
       </urls>
@@ -19,7 +19,7 @@
 			str = "select * from xml where url='" + url + "'",
 			query = y.query(str),
 			results  = <results></results>;
-		results.appendChild( query.results );
+		results.appendChild( query.results.api.query.pages.page );
 		response.object = results;
 	  ]]></execute>
     </select>
