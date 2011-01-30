@@ -18,10 +18,9 @@
 		var content = request.get().response.page,
 			results = <results></results>,
 			items = <item></item>;
-		items.appendChild( <titles>{titles}</titles> );
 		items.appendChild( content );
 		results.appendChild( items );
-		response.object = request.get().response.page;
+		response.object = results;
 	  ]]></execute>
     </select>
   </bindings>
