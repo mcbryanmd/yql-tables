@@ -16,7 +16,7 @@
       </inputs>
   	  <execute><![CDATA[
 		var content = request.get().response.page;
-			results = <results></results>;
+			results = <results1></results1>;
 		var xresults =
 			<results>
 				<results>
@@ -25,7 +25,7 @@
 				</results>
 			</results>;
 		results.appendChild( content );
-		response.object = content;
+		response.object = results;
 	  ]]></execute>
     </select>
   </bindings>
