@@ -15,13 +15,14 @@
         <key id="titles" type="xs:string" paramType="query" required="true"/>
       </inputs>
   	  <execute><![CDATA[
-		response.object =
+		var results =
 			<results>
 				<results>
 				<titles>{titles}</titles>
 				<site>{site}</site>
 				</results>
 			</results>;
+		response.object = request.get().response;
 	  ]]></execute>
     </select>
   </bindings>
