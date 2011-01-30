@@ -20,7 +20,7 @@
 			titles = titles;
 		items.appendChild( titles );
 		xml.appendChild( items );
-		response.object = xml;
+		response.object = <results>testing</results>;
 	  ]]></execute>
     </select>
   </bindings>
