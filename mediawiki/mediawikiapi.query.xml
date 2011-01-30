@@ -16,8 +16,10 @@
       </inputs>
   	  <execute><![CDATA[
 		var content = request.get().response.page,
-			results = <results><titles>{titles}</titles></results>;
-		results.appendChild( content );
+			results = <results></results>,
+			items = <item><titles>{titles}</titles></item>;
+		items.appendChild( content );
+		results.appendChild( items );
 		response.object = results;
 	  ]]></execute>
     </select>
