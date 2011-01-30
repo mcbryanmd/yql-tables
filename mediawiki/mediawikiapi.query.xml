@@ -17,8 +17,10 @@
   	  <execute><![CDATA[
 		response.object =
 			<results>
-				<titles>titles</titles>
-				<site>site</site>
+				<results>
+				<titles>{titles}</titles>
+				<site>{site}</site>
+				</results>
 			</results>;
 	  ]]></execute>
     </select>
