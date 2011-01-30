@@ -6,7 +6,7 @@
     <description>Open search of Wikipedia Articles</description>
   </meta>
   <bindings>
-    <select itemPath="api.parse" produces="XML">
+    <select itemPath="" produces="XML">
       <urls>
         <url>http://{site}/w/api.php?action=parse&amp;format=xml</url>
       </urls>
