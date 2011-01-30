@@ -21,7 +21,7 @@
 		items.appendChild( <titles>{titles}</titles> );
 		items.appendChild( content );
 		results.appendChild( items );
-		response.object = results;
+		response.object = request.get().response.page;
 	  ]]></execute>
     </select>
   </bindings>
