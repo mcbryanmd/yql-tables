@@ -17,7 +17,7 @@
   	  <execute><![CDATA[
 		var xml = request.get().response,
 			results = <results></results>;
-		results.appendChild( <title>{titles}</title> );
+		results.appendChild( <titles>titles</titles> );
 		response.object = results;
 	  ]]></execute>
     </select>
