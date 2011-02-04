@@ -18,11 +18,13 @@
   	  <execute><![CDATA[
 		var url = "http://"+site+"/w/api.php?action=parse&format=xml&text="+text,
 			str = "select * from xml where url='" + url + "'",
-			query = y.query(str),
 			results  = <item></item>,
 			titles = <title>{title}</title>;
-		while ( !(query.results.api.parse.text) ) {
-			query = y.query(str);
+		while ( query.results.api.parse.text === undefined ) {
+			try {
+				query = y.query(str);
+			}
+			catch (err) {}
 		}
 		results.appendChild( titles );
 		results.appendChild( query.results.api.parse.text );
