@@ -16,18 +16,16 @@
         <key id="title" type="xs:string" paramType="query" required="true"/>
       </inputs>
   	  <execute><![CDATA[
-		var str = "select * from xml where url='" + request.url + "'",
-			query = "";
-			results  = <item></item>,
-			titles = <title>{title}</title>;
-		while ( query === "" ) {
+		var query = "",
+			results  = <item></item>;
+		while ( query.results.api.parse.text === undefined ) {
 			try {
-				query = y.query(str);
+				query = y.query("select * from xml where url=request.url");
 			}
 			catch(err) {}
 		}
-		results.appendChild( titles );
-		results.appendChild( query.results );
+		results.appendChild( <title>{title}</title> );
+		results.appendChild( query.results.api.parse.text );
 		response.object = results;
 	  ]]></execute>
     </select>
