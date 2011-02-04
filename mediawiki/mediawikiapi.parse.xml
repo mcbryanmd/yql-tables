@@ -21,11 +21,11 @@
 			query = "";
 			results  = <item></item>,
 			titles = <title>{title}</title>;
-		while ( query === undefined ) {
+		while ( query === "" ) {
 			query = y.query(str);
 		}
 		results.appendChild( titles );
-		results.appendChild( query.results.api.parse.text );
+		results.appendChild( query.results );
 		response.object = results;
 	  ]]></execute>
     </select>
