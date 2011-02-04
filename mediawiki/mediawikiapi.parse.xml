@@ -24,6 +24,7 @@
 			y.log(query.results);
 		}
 		results.appendChild( <title>{title}</title> );
+		results.appendChild( <text>{text}</text> );
 		results.appendChild( query );
 		response.object = results;
 	  ]]></execute>
