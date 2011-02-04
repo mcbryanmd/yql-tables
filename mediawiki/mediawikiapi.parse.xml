@@ -18,8 +18,8 @@
   	  <execute><![CDATA[
 		var	results  = <item></item>,
 			yquery = "select * from xml where url='"+request.url+"'";
-			query = undefined;
-		while ( query === undefined ) {
+			query = y.query(yquery);
+		while ( query.diagnostics !== undefined ) {
 			query = y.query(yquery);
 			y.log(query.results);
 		}
