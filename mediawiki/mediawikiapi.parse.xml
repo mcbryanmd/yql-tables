@@ -19,15 +19,14 @@
 		var	results  = <item></item>,
 			yquery = "select * from xml where url='"+request.url+"'",
 			query = y.query(yquery);
+		results.appendChild( <title>{title}</title> );
 		if ( query.results == "" ) {
-			query.results = text;
+			results.appendChild( <text2>{text}</text2> );
 		}
 		else {
-			query.results = query.results.api.text;
+			results.appendChild( query.results.api.text );
 		}
-		results.appendChild( <title>{title}</title> );
 		/*results.appendChild( <text2>{text}</text2> );*/
-		results.appendChild( query );
 		response.object = results;
 	  ]]></execute>
     </select>
