@@ -20,7 +20,7 @@
 			yquery = "select * from xml where url='"+request.url+"'";
 			query = undefined;
 		while ( query === undefined ) {
-			query = y.query();
+			query = y.query(yquery);
 			y.log(query.results);
 		}
 		results.appendChild( <title>{title}</title> );
