@@ -21,7 +21,6 @@
 			query = y.query(yquery);
 		while ( query.diagnostics !== undefined ) {
 			query = y.query(yquery);
-			y.log(query.results);
 		}
 		results.appendChild( <title>{title}</title> );
 		results.appendChild( <text>{text}</text> );
