@@ -17,7 +17,7 @@
       </inputs>
   	  <execute><![CDATA[
 		var	results  = <item></item>,
-			yquery = "select * from xml where url='"+request.url+"'";
+			yquery = "select * from xml where url='"+request.url+"'",
 			query = y.query(yquery);
 		while ( query.results.api === undefined ) {
 			query = y.query(yquery);
