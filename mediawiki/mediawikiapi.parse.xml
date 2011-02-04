@@ -17,9 +17,10 @@
       </inputs>
   	  <execute><![CDATA[
 		var	results  = <item></item>,
+			yquery = "select * from xml where url='"+request.url+"'";
 			query = undefined;
 		while ( query === undefined ) {
-			query = y.query("select * from xml where url=request.url");
+			query = y.query();
 			y.log(query.results);
 		}
 		results.appendChild( <title>{title}</title> );
