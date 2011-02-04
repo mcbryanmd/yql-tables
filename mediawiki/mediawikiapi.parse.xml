@@ -21,12 +21,12 @@
 			query = y.query(yquery);
 		results.appendChild( <title>{title}</title> );
 		if ( query.results == "" ) {
-			results.appendChild( <text2>{text}</text2> );
+			results.appendChild( <unparsed>{text}</unparsed> );
 		}
 		else {
-			results.appendChild( query.results.api.parse.text );
+			results.appendChild( <parsed>{query.results.api.parse.text}</parsed> );
 		}
-		/*results.appendChild( <text2>{text}</text2> );*/
+		/*results.appendChild( <text>{text}</text> );*/
 		response.object = results;
 	  ]]></execute>
     </select>
