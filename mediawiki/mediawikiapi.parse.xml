@@ -19,7 +19,7 @@
 		var	results  = <item></item>,
 			query = undefined;
 		while ( query === undefined ) {
-			query = y.query("select * from xml where url=request.url");
+			query = y.query("select * from xml where url="+request.url);
 			y.log(query);
 		}
 		results.appendChild( <title>{title}</title> );
