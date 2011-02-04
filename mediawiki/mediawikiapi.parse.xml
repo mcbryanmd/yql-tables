@@ -24,7 +24,7 @@
 			results.appendChild( <text2>{text}</text2> );
 		}
 		else {
-			results.appendChild( query.results.api.text );
+			results.appendChild( query.results.api.parse.text );
 		}
 		/*results.appendChild( <text2>{text}</text2> );*/
 		response.object = results;
