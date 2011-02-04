@@ -22,10 +22,7 @@
 			results  = <item></item>,
 			titles = <title>{title}</title>;
 		while ( query === undefined ) {
-			try {
-				query = y.query(str);
-			}
-			catch (err) {}
+			query = y.query(str);
 		}
 		results.appendChild( titles );
 		results.appendChild( query.results.api.parse.text );
