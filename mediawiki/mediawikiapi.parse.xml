@@ -21,7 +21,7 @@
 			query = "";
 			results  = <item></item>,
 			titles = <title>{title}</title>;
-		while ( query.results.api.parse.text === undefined ) {
+		while ( query === undefined ) {
 			try {
 				query = y.query(str);
 			}
