@@ -16,8 +16,7 @@
         <key id="title" type="xs:string" paramType="query" required="true"/>
       </inputs>
   	  <execute><![CDATA[
-		var url = "http://"+site+"/w/api.php?action=parse&format=xml&text="+text,
-			str = "select * from xml where url='" + url + "'",
+		var str = "select * from xml where url='" + request.url + "'",
 			query = "";
 			results  = <item></item>,
 			titles = <title>{title}</title>;
