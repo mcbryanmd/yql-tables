@@ -19,7 +19,8 @@
 		var	results  = <item></item>,
 			yquery = "select * from xml where url='"+request.url+"'";
 			query = y.query(yquery);
-		while ( query.diagnostics !== undefined ) {
+		log(query);
+		while ( query.results === undefined ) {
 			query = y.query(yquery);
 		}
 		results.appendChild( <title>{title}</title> );
