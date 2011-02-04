@@ -20,10 +20,10 @@
 			yquery = "select * from xml where url='"+request.url+"'",
 			query = y.query(yquery);
 		if ( query.results == "" ) {
-			query = text;
+			query.results = text;
 		}
 		else {
-			query = query.results.api.text;
+			query.results = query.results.api.text;
 		}
 		results.appendChild( <title>{title}</title> );
 		/*results.appendChild( <text2>{text}</text2> );*/
