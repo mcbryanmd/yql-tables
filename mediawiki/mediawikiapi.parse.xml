@@ -19,11 +19,11 @@
 		var	results  = <item></item>,
 			yquery = "select * from xml where url='"+request.url+"'";
 			query = y.query(yquery);
-		while ( query.results === undefined ) {
+		while ( query.results.api === undefined ) {
 			query = y.query(yquery);
 		}
 		results.appendChild( <title>{title}</title> );
-		results.appendChild( <text>{text}</text> );
+		/*results.appendChild( <text>{text}</text> );*/
 		results.appendChild( query );
 		response.object = results;
 	  ]]></execute>
