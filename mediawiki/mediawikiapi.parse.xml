@@ -21,7 +21,7 @@
 			query = y.query(str),
 			results  = <item></item>,
 			titles = <title>{title}</title>;
-		while ( query.results.api.parse.text === undefined ) {
+		while ( query.results.api.parse.text == "" ) {
 			query = y.query(str);
 		}
 		results.appendChild( titles );
